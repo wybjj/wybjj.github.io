@@ -1,32 +1,47 @@
-## 使用 RVM 安装包管理器安装ruby
+# 使用 RVM 安装包管理器安装ruby
 
-### 安装 RVM （第一次尝试，失败）
-#### 安装命令
-```markdown
+## 安装 RVM （第一次尝试，失败）
+
+### 安装命令
+
+```bat
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable
 ```
 
 
-### 安装 RVM（第一次尝试，成功）
-#### 安装命令
-```markdown
-# Install mpapis public key (might need `gpg2` and or `sudo`)
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+## 安装 RVM（第一次尝试，成功）
 
-# Download the installer
+### 安装命令
+
+* Install mpapis public key (might need `gpg2` and or `sudo`)
+
+```bat
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+```
+
+* Download the installer
+
+```bat
 \curl -O https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer
 \curl -O https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer.asc
+```
 
-# Verify the installer signature (might need `gpg2`), and if it validates...
+* Verify the installer signature (might need `gpg2`), and if it validates...
+
+```bat
 gpg --verify rvm-installer.asc &&
+```
 
-# Run the installer
+* Run the installer
+
+```bat
 bash rvm-installer stable
 ```
 
-#### 安装完成后提示
-```markdown
+### 安装完成后提示
+
+```bat
 Installation of RVM in /usr/local/rvm/ is almost complete:
 
   * First you need to add all users that will be using rvm to 'rvm' group,
@@ -45,20 +60,23 @@ Installation of RVM in /usr/local/rvm/ is almost complete:
 In case of problems: https://rvm.io/help and https://twitter.com/rvm_io
 ```
 
-### 既然提示了就给用户添加用户组 rvm
-```markdown
+## 既然提示了就给用户添加用户组 rvm
+
+```bat
 usermod -G rvm baijunjie
 usermod -G rvm root
 source /etc/profile.d/rvm.sh
 ```
 
-### 安装ruby
-```markdown
+## 安装ruby
+
+```bat
 rvm install ruby
 ```
 
-### 安装过程中提示
-```markdown
+## 安装过程中提示
+
+```bat
 Searching for binary rubies, this might take some time.
 No binary rubies available for: centos/7/x86_64/ruby-2.3.3.
 Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
