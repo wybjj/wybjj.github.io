@@ -10,7 +10,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 ```
 
 
-## 安装 RVM（第一次尝试，成功）
+## 安装 RVM（第二次尝试，成功）
 
 ### 安装命令
 
