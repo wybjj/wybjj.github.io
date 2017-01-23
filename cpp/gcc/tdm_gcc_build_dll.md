@@ -53,6 +53,7 @@ gcc -shared -o count_of_bit.dll -Wl,--output-def,count_of_bit.def,--out-implib,c
 ```
 
 参数说明：
+
 * -shared 生成动态连接库
 
 * -o 输出dll文件名称
