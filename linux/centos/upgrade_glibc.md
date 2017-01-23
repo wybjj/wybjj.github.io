@@ -15,11 +15,11 @@ $ rpm -qa |grep glibc
 
 1. 从 glibc [官方网站](http://www.gnu.org/software/libc/)下载glibc 源码
 
-glibc 2.14 源码下载FTP地址为：http://ftp.gnu.org/gnu/libc/glibc-2.14.tar.xz
+glibc 2.14 源码下载FTP地址为：[http://ftp.gnu.org/gnu/libc/glibc-2.14.tar.xz](http://ftp.gnu.org/gnu/libc/glibc-2.14.tar.xz)
 
 ```sh
 wget http://ftp.gnu.org/gnu/libc/glibc-2.14.tar.xz
-···
+```
 
 2. 解压缩源码
 
@@ -29,6 +29,7 @@ tar -xvf glibc-2.14.tar
 ```
 
 如果需要prots库还需要：
+
 ```sh
 wget http://ftp.gnu.org/gnu/libc/glibc-ports-2.14.tar.xz
 xz -d glibc-ports-2.14.tar.xz
@@ -46,11 +47,13 @@ cd build
 4. 配置 glibc
 
 简单的配置安装目录到 /opt
+
 ```sh
 ../configure --prefix=/opt/glibc-2.14
 ```
 
 某些资料把 glibc 安装到 /usr/bin 目录：
+
 ```sh
 ../configure  --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
 ```
