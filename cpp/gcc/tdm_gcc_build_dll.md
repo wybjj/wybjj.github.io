@@ -56,8 +56,8 @@ gcc -shared -o count_of_bit.dll -Wl,--output-def,count_of_bit.def,--out-implib,c
 * -shared 生成动态连接库
 * -o 输出dll文件名称
 * -Wl 后续跟传送给ld的参数
->* --output-def,count_of_bit.def 生成导出函数定义文件 .def
->* --out-implib,count_of_bit.lib 生成导入库文件 .lib 
+> * --output-def,count_of_bit.def 生成导出函数定义文件 .def
+> * --out-implib,count_of_bit.lib 生成导入库文件 .lib 
 
 ## 编译 main.c 生成 test.exe 可执行文件
 
