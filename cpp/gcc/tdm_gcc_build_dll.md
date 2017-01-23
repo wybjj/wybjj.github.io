@@ -8,7 +8,7 @@
 
 * count_of_bit.c 计算数字中二进制位1的个数函数，用来生成dll
 
-···c
+···cpp
 /* count_of_bit.c */
 int count_of_bit(int val)
 {
@@ -28,7 +28,7 @@ int count_of_bit(int val)
 
 * main.c 主函数，调用dll中的函数，用来测试dll
 
-···c
+···cpp
 /* main.c */
 #include <stdio.h>
 #include <stdlib.h>
