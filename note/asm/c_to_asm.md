@@ -11,7 +11,13 @@ cl /Fa hello.c
 * 指定汇编文件的文件名
 
 ```bat
-cl /Fahello.c hello.c
+cl /Fahello.asm hello.c
+```
+
+* 采用最大速度优化的汇编
+
+```bat
+cl /O2 /Fa hello.c
 ```
 
 ## gcc 生成汇编
