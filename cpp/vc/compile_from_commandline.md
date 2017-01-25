@@ -36,7 +36,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 	* link-opt 一个或多个传递给连接选项。
 
 * 编译c 语言 Hello World 程序
-	* c 语言 Hello World 程序代码
+	c 语言 Hello World 程序代码
 	
 	```cpp
 	#include <stdio.h>
@@ -48,7 +48,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 	```
 
 
-	* 编译源代码
+	编译源代码
 
 
 	```bat
@@ -59,7 +59,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 	如果c程序源代码没有使用 .c 扩展名，需要用 /Tcfilename 或 /TC 选项指定。
 
 * 编译 c++ 语言Hello World程序
-	* c++ Hello World 程序代码
+	c++ Hello World 程序代码
 	
 	```cpp
 	#include <iostream>
@@ -70,7 +70,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 	}
 	```
 
-	* 编译源代码
+	编译源代码
 	
 	```bat
 	cl /W4 /EHsc hello_world.cpp
