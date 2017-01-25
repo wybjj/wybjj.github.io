@@ -38,7 +38,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 * 编译c 语言 Hello World 程序
 	* c 语言 Hello World 程序代码
 	
-	···c
+	···cpp
 	#include <stdio.h>
 	
 	int main()
