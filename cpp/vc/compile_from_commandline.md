@@ -39,22 +39,22 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 
 	c 语言 Hello World 程序代码
 	
-	```cpp
+```cpp
 	#include <stdio.h>
 	
 	int main()
 	{
 		printf("Hello, World\n");
 	}
-	```
+```
 
 
 	编译源代码
 
 
-	```bat
+```bat
 	cl /W4 hello_world.c
-	```
+```
 	
 	其中， /W4 选项打开针对程序结构的警告，打开警告有助于开发人员查找一些难以发现的程序错误。
 	如果c程序源代码没有使用 .c 扩展名，需要用 /Tcfilename 或 /TC 选项指定。
@@ -63,20 +63,20 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 
 	c++ Hello World 程序代码
 	
-	```cpp
+```cpp
 	#include <iostream>
 	
 	int main()
 	{
 		std::cout << "Hello, World" << std::endl;
 	}
-	```
+```
 
 	编译源代码
 	
-	```bat
+```bat
 	cl /W4 /EHsc hello_world.cpp
-	```
+```
 	
 	其中， /EHsc 编译选项用来打开标准异常处理。如果不打，编译器会提示警告信息。
 	如果c++源代码没有使用 .cpp 扩展名，需要用 /Tpfilename 或 /TP 选项指定。
