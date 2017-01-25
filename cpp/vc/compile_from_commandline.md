@@ -73,7 +73,7 @@ int main()
 编译源代码
 	
 ```bat
-    cl /W4 /EHsc hello_world.cpp
+cl /W4 /EHsc hello_world.cpp
 ```
     
 其中， /EHsc 编译选项用来打开标准异常处理。如果不打，编译器会提示警告信息。
