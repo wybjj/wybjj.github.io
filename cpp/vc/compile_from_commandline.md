@@ -24,61 +24,60 @@
 
 ## 使用 CL 编译器编译代码
 
-* 编译命令格式
+### 编译命令格式
 
-	```bat
-	CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-opt...]
-	```
+```bat
+CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-opt...]
+```
+* option 编译选项
+* file 一个或多个源代码、.obj和库的文件名。 CL将编译源代码并将 .obj 文件和库文件将被传递给连接器。
+* lib 一个或多个库的名称，这些库将被传递给连接器。
+* command-file 一个包含多个选项和文件名的命令文件。
+* link-opt 一个或多个传递给连接选项。
 
-	* option 编译选项
-	* file 一个或多个源代码、.obj和库的文件名。 CL将编译源代码并将 .obj 文件和库文件将被传递给连接器。
-	* lib 一个或多个库的名称，这些库将被传递给连接器。
-	* command-file 一个包含多个选项和文件名的命令文件。
-	* link-opt 一个或多个传递给连接选项。
+### 编译c 语言 Hello World 程序
 
-* 编译c 语言 Hello World 程序
-
-    c 语言 Hello World 程序代码
+c 语言 Hello World 程序代码
 	
-    ```cpp
-    #include <stdio.h>
-    
-    int main()
-    {
-        printf("Hello, World\n");
-    }
-   ```
+```cpp
+#include <stdio.h>
 
-    编译源代码
+int main()
+{
+    printf("Hello, World\n");
+}
+```
+
+编译源代码
     
-    ```bat
-    cl /W4 hello_world.c
-    ```
+```bat
+cl /W4 hello_world.c
+```
+
+其中， /W4 选项打开针对程序结构的警告，打开警告有助于开发人员查找一些难以发现的程序错误。
+如果c程序源代码没有使用 .c 扩展名，需要用 /Tcfilename 或 /TC 选项指定。
     
-    其中， /W4 选项打开针对程序结构的警告，打开警告有助于开发人员查找一些难以发现的程序错误。
-    如果c程序源代码没有使用 .c 扩展名，需要用 /Tcfilename 或 /TC 选项指定。
+### 编译 c++ 语言Hello World程序
     
-* 编译 c++ 语言Hello World程序
-    
-    c++ Hello World 程序代码
+c++ Hello World 程序代码
 	
-    ```cpp
-    #include <iostream>
+```cpp
+#include <iostream>
     
-    int main()
-    {
-        std::cout << "Hello, World" << std::endl;
-    }
-    ```
-    
-    编译源代码
+int main()
+{
+    std::cout << "Hello, World" << std::endl;
+}
+```
+
+编译源代码
 	
-    ```bat
+```bat
     cl /W4 /EHsc hello_world.cpp
-    ```
+```
     
-    其中， /EHsc 编译选项用来打开标准异常处理。如果不打，编译器会提示警告信息。
-    如果c++源代码没有使用 .cpp 扩展名，需要用 /Tpfilename 或 /TP 选项指定。
+其中， /EHsc 编译选项用来打开标准异常处理。如果不打，编译器会提示警告信息。
+如果c++源代码没有使用 .cpp 扩展名，需要用 /Tpfilename 或 /TP 选项指定。
     
 ## 参考文档
 * [MSDN CL编译选项](https://msdn.microsoft.com/EN-US/library/19z1t1wy(v=VS.140,d=hv.2).aspx)
