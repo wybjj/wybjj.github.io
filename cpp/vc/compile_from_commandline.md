@@ -1,4 +1,4 @@
-﻿# Visual C++ 命令行编译 C/C++ 程序
+# Visual C++ 命令行编译 C/C++ 程序
 
 ## Visual C++ 命令行编译的几种方式
 
