@@ -3,94 +3,91 @@
 ## 编译器及测试环境
 
 ### 测试用编译器概述
-	
-	目前，最常用的编译器为 Windows 系统下的 Visual C++ 和 Linux 系统下的 GCC。
-	本次测试，选取了 Visual C++ 2015 和 GCC 4.8.4 并分别编译了 Windows 和 Linux 系统下的 32 位 和 64 位程序。
-	某些时候，可能会在windows 环境下使用 GCC 编译程序，因此也下载了 TDM-GCC 的 32位和64位版本作为比较。	
-	下面描述了各编译器在本文中的简称和编译器版本、所运行的操作系统以及编译测试程序时使用的编译命令。
+
+目前，最常用的编译器为 Windows 系统下的 Visual C++ 和 Linux 系统下的 GCC。
+本次测试，选取了 Visual C++ 2015 和 GCC 4.8.4 并分别编译了 Windows 和 Linux 系统下的 32 位 和 64 位程序。
+某些时候，可能会在windows 环境下使用 GCC 编译程序，因此也下载了 TDM-GCC 的 32位和64位版本作为比较。	
+下面描述了各编译器在本文中的简称和编译器版本、所运行的操作系统以及编译测试程序时使用的编译命令。
 
 ### VC32
 
-	编译器：Visual C++ 2015 Update 3 所带 32位 C/C++ 编译器 cl.exe， 版本号 19.00.24210。
-	
-	操作系统：Windows 10 64位。
-	
-	编译命令为:
-	
-	```bat
-	cl type.c /W4 /Fetest_type_win32
-	```
-	
+编译器：Visual C++ 2015 Update 3 所带 32位 C/C++ 编译器 cl.exe， 版本号 19.00.24210。
+操作系统：Windows 10 64位。
+编译命令为:
+
+```bat
+cl type.c /W4 /Fetest_type_win32
+```
+
 ### VC64
 
-	编译器：Visual C++ 2015 Update 3 所带 64位 C/C++ 编译器 cl.exe， 版本号 19.00.24210。
-	
-	操作系统：Windows 10 64位。
-	
-	编译命令为:
-	
-	```bat
-	cl type.c /W4 /Fetest_type_x64.exe
-	```
-	
+编译器：Visual C++ 2015 Update 3 所带 64位 C/C++ 编译器 cl.exe， 版本号 19.00.24210。
+
+操作系统：Windows 10 64位。
+
+编译命令为:
+
+```bat
+cl type.c /W4 /Fetest_type_x64.exe
+```
+
 ### GCC32
 
-	编译器：GCC 编译器，64位编译器上使用 -m32 参数编译32位程序，版本号 4.8.4(Ubuntu 4.8.4-2ubuntu1~14.04.3)。
+编译器：GCC 编译器，64位编译器上使用 -m32 参数编译32位程序，版本号 4.8.4(Ubuntu 4.8.4-2ubuntu1~14.04.3)。
 	
-	操作系统：Ubuntu 14.04 64bit。
+操作系统：Ubuntu 14.04 64bit。
 	
-	编译命令为:
+编译命令为:
 	
-	```sh
-	gcc -m32 -std=c99 -Wall type.c -o test_type32
-	```
+```sh
+gcc -m32 -std=c99 -Wall type.c -o test_type32
+```
 	
 ### GCC64
 
-	编译器：GCC 编译器，64位编译器，版本号 4.8.4(Ubuntu 4.8.4-2ubuntu1~14.04.3)。
+编译器：GCC 编译器，64位编译器，版本号 4.8.4(Ubuntu 4.8.4-2ubuntu1~14.04.3)。
 	
-	操作系统：Ubuntu 14.04 64bit。
+操作系统：Ubuntu 14.04 64bit。
 	
-	编译命令为:
+编译命令为:
 	
-	```sh
-	gcc -std=c99 -Wall type.c -o test_type64
-	```
+```sh
+gcc -std=c99 -Wall type.c -o test_type64
+```
 	
 ### TDM32
 
-	编译器：TDM-GCC 编译器，GCC 64位编译器，版本号 5.1.0 (tdm64-1)。[tdm-gcc-5.1.0-3.exe 下载](http://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download)
+编译器：TDM-GCC 编译器，GCC 64位编译器，版本号 5.1.0 (tdm64-1)。[tdm-gcc-5.1.0-3.exe 下载](http://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download)
 	
-	操作系统：Windows 10 64位。
+操作系统：Windows 10 64位。
 	
-	编译命令为:
+编译命令为:
 	
-	```bat
-	gcc -std=c99 -Wall -o test_type_tdm32.exe type_t32.c
-	```
-	
-	
+```bat
+gcc -std=c99 -Wall -o test_type_tdm32.exe type_t32.c
+```
+
 ### TDM64
 
-	编译器：TDM64-GCC 编译器，GCC 64位编译器，版本号 5.1.0 (tdm64-1)。[tdm64-gcc-5.1.0-2.exe 下载](http://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm64-gcc-5.1.0-2.exe/download)
+编译器：TDM64-GCC 编译器，GCC 64位编译器，版本号 5.1.0 (tdm64-1)。[tdm64-gcc-5.1.0-2.exe 下载](http://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm64-gcc-5.1.0-2.exe/download)
 	
-	操作系统：Windows 10 64位。
+操作系统：Windows 10 64位。
 	
-	编译命令为:
+编译命令为:
 	
-	```bat
-	gcc -std=c99 -Wall -o test_type_tdm64.exe type_t.c
-	```
-	
+```bat
+gcc -std=c99 -Wall -o test_type_tdm64.exe type_t.c
+```
+
 ## 测试代码
 
 ### 测试代码概述
 
-	一般的测试程序代码使用 type.c 测试程序。
+一般的测试程序代码使用 type.c 测试程序。
 	
-	由于 TDM64 的 printf 不支持 C99 标准规定的用于 size_t 类型的 z 长度标记，因此强制转换为 int 类型输出，修改后形成 type_t.c。
+由于 TDM64 的 printf 不支持 C99 标准规定的用于 size_t 类型的 z 长度标记，因此强制转换为 int 类型输出，修改后形成 type_t.c。
 	
-	由于 TDM32 编译时找不到 <uchar.h>，无法使用 char16_t 和 char32_t 类型，因此长度输出null，修改后形成 type_t32.c。
+由于 TDM32 编译时找不到 <uchar.h>，无法使用 char16_t 和 char32_t 类型，因此长度输出null，修改后形成 type_t32.c。
 
 ### type.c —— VC32、VC64、GCC32、GCC64 编译使用的测试代码：
 
