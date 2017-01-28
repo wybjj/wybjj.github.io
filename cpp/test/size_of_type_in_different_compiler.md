@@ -226,5 +226,5 @@ int main()
 
 * 不论32位还是64位程序，wchar_t 在 Visual C++ 中为 2 字节，在 GCC 中为 4 字节， 在 TDM-GCC 中是2字节。
 
-* long double 在 Visual C++ 中与 double 一致为8字节，但在 GCC 和 比 double 要大，且64为程序比32为更大。
+* long double 在 Visual C++ 中与 double 一致为8字节，但在 GCC 和 比 double 要大，且在64位程序中比在32位程序中更大。
 
