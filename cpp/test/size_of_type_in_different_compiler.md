@@ -216,7 +216,7 @@ int main()
 
 * type 列 为测试的 c语言 数据类型。
 
-* std-min 列 为 《C++ Primer 第五版 中文版》 2.1.1 节 介绍的个数据类型的最小尺寸。
+* std-min 列 为 《C++ Primer 第五版 中文版》 2.1.1 节 介绍的各数据类型的最小尺寸。
 
 * 其余列 为个编译器执行得到的数据类型大小。
 
@@ -230,5 +230,5 @@ int main()
 
 * 不论32位还是64位程序，wchar_t 在 Visual C++ 中为 2 字节，在 GCC 中为 4 字节， 在 TDM-GCC 中是2字节。
 
-* long double 在 Visual C++ 中与 double 一致为8字节，但在 GCC 和 比 double 要大，且64为程序比32为更大。
+* long double 在 Visual C++ 中与 double 一致为8字节，但在 GCC 和 比 double 要大，且在64位程序中比在32位程序中更大。
 
